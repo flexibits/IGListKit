@@ -6,7 +6,7 @@
  */
 
 static CGRect IGListRectIntegralScaled(CGRect rect) {
-    CGFloat scale = [[UIScreen mainScreen] scale];
+    CGFloat scale = [[UITraitCollection currentTraitCollection] displayScale];
     return CGRectMake(floorf(rect.origin.x * scale) / scale,
                       floorf(rect.origin.y * scale) / scale,
                       ceilf(rect.size.width * scale) / scale,
